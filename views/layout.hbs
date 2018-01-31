@@ -3,6 +3,11 @@
   <head>
     <title>{{title}}</title>
     <link rel="stylesheet" href='/css/custom.css'/>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
 
   </head>
   <body>
@@ -55,21 +60,14 @@
   
                         <div class="jumbotron text-center" >
                             <h1>Hello Beautiful!</h1>
+                                         <p>{{imageList}}</p>
                             <p>This is a sidebar navigation responsive template built off of Bootstrap 3.0 and simple sidebar template. It includes anchors, scroll spy, smooth scroll, and Awesome icon fonts.</p>
                             <p><a class="btn btn-default">Click On Me!</a>
                             <a class="btn btn-info">Tweet Me!</a></p>
                         </div>
     
                 </div>
-             
-<ul class="flex-container">
-  <li class="flex-item">1</li>
-  <li class="flex-item">2</li>
-  <li class="flex-item">3</li>
-  <li class="flex-item">4</li>
-  <li class="flex-item">5</li>
-  <li class="flex-item">6</li>
-</ul>
+
 <div class="container">
 <!-- Stack the columns on mobile by making one full-width and the other half-width -->
 <div class="row">
@@ -79,7 +77,28 @@
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Detail
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Product Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                   This is what you see!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
         </div>
         </div>
     </div>
@@ -90,7 +109,9 @@
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
             </div>
         </div>
     </div>
@@ -101,7 +122,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
                 </div>
         </div>
     </div>
@@ -112,7 +135,9 @@
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
         </div>
         </div>
     </div>
@@ -123,7 +148,9 @@
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
             </div>
         </div>
     </div>
@@ -134,7 +161,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
                 </div>
         </div>
     </div>
@@ -145,7 +174,9 @@
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
         </div>
         </div>
     </div>
@@ -156,7 +187,9 @@
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
             </div>
         </div>
     </div>
@@ -167,7 +200,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
                 </div>
         </div>
     </div>
@@ -179,7 +214,9 @@
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    Detail
+                </button>
                 </div>
         </div>
     </div>
@@ -189,7 +226,7 @@
 
                 <div class="navbar navbar-default navbar-static-bottom">
                     <p class="navbar-text pull-left">
-                        Built by <a href="http://mvnguyen.com" target="_blank">Michael V Nguyen
+                        Built by <a  target="_blank">Xuyang Weng
                     </p>
                 </div>
             </div>
