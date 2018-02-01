@@ -1,0 +1,88 @@
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-12 d-sm-block d-md-none mb-2">
+                    <button class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#sidebar-items" aria-expanded="false"
+                        aria-controls="sidebar-items">MENU</button>
+                </div>
+
+                <div class="col-md-3 collapse d-md-block" id="sidebar-items">
+                    <div class="sidebar-items">
+                        <div class="sidebar-items__sidebar-item sidebar-items__sidebar-item--header">
+                            MENU
+                        </div>
+
+                        {{#each imageList }}
+                        <a href={{anchor this}} class="sidebar-items__sidebar-item">
+                             {{this}}
+                        </a>
+
+                        {{/each}}
+
+
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h1>Grocery Store</h1>
+                    <hr>
+                    <div class="container">
+                        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+
+
+                        <div class="row">
+                            {{#each imageList }}
+
+                            <a name={{this}}></a>
+
+                            <div class="col-sm col-lg col-md ">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src={{concat this}} alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{this}}</h5>
+                                        <p class="card-text">This is the best {{this}} it the Earth!</p>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target={{anchor this}}>
+                                            Detail
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id={{this}} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Product Detail</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        As is shown, this is best {{this}} you ever see!
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {{/each}}
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+        <nav class="navbar sticky-bottom navbar-light bg-faded">
+            <a class="navbar-brand" href="#">Built by Xuyang Weng</a>
+            <a class="navbar-brand" href="#">Images from: unsplash.com</a>
+
+        </nav>
+    </section>

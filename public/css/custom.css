@@ -2508,7 +2508,7 @@ tbody.collapse.show {
   background-size: 8px 10px;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
-  appearance: none; }
+   }
   .custom-select:focus {
     border-color: #80bdff;
     outline: 0;
