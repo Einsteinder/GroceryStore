@@ -13,7 +13,7 @@ const sassFiles = [
   ];
   const vendorJsFiles = [
     "./node_modules/jquery/dist/jquery.min.js",
-    "./node_modules/popper.js/dist/popper.min.js",
+    "./node_modules/popper.js/dist/umd/popper.min.js",
     "./node_modules/bootstrap/dist/js/bootstrap.min.js"
   ];
 gulp.task('styles', function() {
@@ -34,8 +34,8 @@ gulp.task('styles', function() {
 gulp.task("scripts", () => {
     gulp
       .src(vendorJsFiles)
-      .pipe(concatenate("all.js"))
-      .pipe(gulp.dest("./public/js/"));
+      .pipe(concatenate("all.min.js"))
+      .pipe(gulp.dest("./public/javascripts/"));
   });
   
 
