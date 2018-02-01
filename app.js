@@ -9,10 +9,46 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+const exphbs = require("express-handlebars");
+const Handlebars = require("handlebars");
 
+
+const handlebarsInstance = exphbs.create({
+  defaultLayout: "main",
+  // Specify helpers which are only registered on this instance.
+  helpers: {
+  
+    concat: function(path) {
+      return "/images/" + path+".jpg";},
+    anchor: function(anchorId) {
+        return "#" + anchorId;},
+
+    asJSON: (obj, spacing) => {
+      if (typeof spacing === "number")
+        return new Handlebars.SafeString(JSON.stringify(obj, null, spacing));
+
+      return new Handlebars.SafeString(JSON.stringify(obj));
+    }
+  }
+});
+
+const rewriteUnsupportedBrowserMethods = (req, res, next) => {
+  // If the user posts to the server with a property called _method, rewrite the request's method
+  // To be that method; so if they post _method=PUT you can now allow browsers to POST to a route that gets
+  // rewritten in this middleware to a PUT route
+  if (req.body && req.body._method) {
+    req.method = req.body._method;
+    delete req.body._method;
+  }
+
+  // let the next middleware run:
+  next();
+};
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+
+app.engine("handlebars", handlebarsInstance.engine);
+app.set("view engine", "handlebars");
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

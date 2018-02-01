@@ -8,7 +8,14 @@ var traverse = require('fs-tree-traverse');
 router.get('/', function(req, res, next) {
   
   var imageList = traverse.list(path.join(__dirname, '../public/images'), function (err, files) {
-    res.render('index', { title: 'Express',imageList:files});
+    var filesList = []
+    var pathName = "/images/"
+    for (i = 0; i < files.length; i++) { 
+      filesList.push(files[i].slice(0, -4).match(/([^\/]*)\/*$/)[1])
+    
+    
+  }
+    res.render('index', { title: 'Express',imageList:filesList,pathName:pathName});
   });
 
  
