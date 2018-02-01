@@ -22,6 +22,10 @@ const handlebarsInstance = exphbs.create({
       return "/images/" + path+".jpg";},
     anchor: function(anchorId) {
         return "#" + anchorId;},
+    anchorModal: function(anchorId) {
+      return "#Modal" + anchorId;},
+    Modal: function(anchorId) {
+        return "Modal" + anchorId;},
 
     asJSON: (obj, spacing) => {
       if (typeof spacing === "number")
